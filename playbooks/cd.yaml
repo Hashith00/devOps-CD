@@ -1,0 +1,23 @@
+---
+- hosts: dev
+  become: true
+  tasks:
+    - name: Clone Node.js app repository
+      git:
+        repo: https://github.com/code-sagar/nodejs-demo.git
+        dest: /var/www/html/nodejs-demo
+
+    - name: Docker Login
+      docker_login:
+        registry_url: https://hub.docker.com/repository/docker/hashith/node_devops/general
+        username: "{{ docker_hub_username }}"
+        password: "{{ docker_hub_password }}"
+
+    - name: Pull the image
+      command: sudo docker pull hashith/node_devops:latest
+
+    - name: Delete old image
+      command: sudo docker rm -f node-container
+
+    - name: Delete old image
+      command: sudo docker run -d -p 8080:8080 --name node-container hashith/node_devops:latest
