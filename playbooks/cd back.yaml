@@ -2,8 +2,8 @@
 - hosts: dev
   become: true
   vars:
-    docker_image: hashith/vojo_admin_front
-    container_name: node-container
+    docker_image: hashith/vojo_admin_backend
+    container_name: node-container-backend
     app_repo: https://github.com/code-sagar/nodejs-demo.git
     app_dest: /var/www/html/nodejs-demo
     docker_hub_username: hashith
@@ -33,4 +33,4 @@
         force_kill: yes
 
     - name: Run the Docker container
-      command: docker run -d -p 8080:8080 --name {{ container_name }} {{docker_image}}
+      command: docker run -d -p 4000:4000 --name {{ container_name }} {{docker_image}}
