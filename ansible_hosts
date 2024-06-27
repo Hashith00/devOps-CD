@@ -1,3 +1,6 @@
 [dev]
 dev1 ansible_host=3.27.197.25
 dev2 ansible_host=3.25.117.6
+
+[qa]
+qa1 ansible_host=52.64.2.84

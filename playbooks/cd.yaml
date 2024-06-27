@@ -17,7 +17,7 @@
 
     - name: Docker Login
       docker_login:
-        registry_url: https://hub.docker.com/repository/docker/hashith/node_devops/general
+        registry_url: https://index.docker.io/v1/
         username: "{{ docker_hub_username }}"
         password: "{{ docker_hub_password }}"
 
@@ -38,4 +38,4 @@
         image: "{{ docker_image }}"
         state: started
         ports:
-          - "8080:8080"
+          - "3000:3000"
