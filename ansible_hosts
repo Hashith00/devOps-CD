@@ -1,6 +1,7 @@
 [dev]
-dev1 ansible_host=3.27.197.25
-dev2 ansible_host=3.25.117.6
+dev1 ansible_host=13.238.161.89
+dev2 ansible_host=54.206.91.60
 
-[qa]
-qa1 ansible_host=3.25.219.254
+[back]
+back1 ansible_host=3.25.219.254
+back2 ansible_host=3.25.219.254
