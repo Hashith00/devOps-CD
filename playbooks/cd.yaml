@@ -6,9 +6,8 @@
     container_name: node-container
     app_repo: https://github.com/code-sagar/nodejs-demo.git
     app_dest: /var/www/html/nodejs-demo
-    docker_hub_username: hashith
-    docker_hub_password: da19sun95
-
+    docker_hub_username:
+    docker_hub_password: 
   tasks:
     - name: Clone Node.js app repository
       git:
