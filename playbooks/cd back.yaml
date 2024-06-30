@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: back
   become: true
   vars:
     docker_image: hashith/vojo_admin_backend

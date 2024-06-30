@@ -2,7 +2,7 @@
 - hosts: dev
   become: true
   vars:
-    docker_image: hashith/vojo_admin_front
+    docker_image: hashith/vojo_admin_front:latest
     container_name: node-container
     app_repo: https://github.com/code-sagar/nodejs-demo.git
     app_dest: /var/www/html/nodejs-demo
